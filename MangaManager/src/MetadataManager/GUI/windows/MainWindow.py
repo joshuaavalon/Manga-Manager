@@ -196,6 +196,8 @@ class MainWindow(GUIApp):
                                                           tooltip="The translated series name").pack()
         self.widget_mngr.SeriesSort = ComboBoxWidget(parent_frame, cinfo_name="SeriesSort",
                                                      label_text="Series Sort").pack()
+        self.widget_mngr.TitleSort = ComboBoxWidget(parent_frame, cinfo_name="TitleSort",
+                                                     label_text="Title Sort").pack()
 
         self.widget_mngr.Title = ComboBoxWidget(parent_frame, cinfo_name="Title",
                                                 tooltip="The title of the chapter").pack()

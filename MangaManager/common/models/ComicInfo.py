@@ -5,6 +5,7 @@ comic_info_tag_map = {
     "series": "Series",
     "localized_series": "LocalizedSeries",
     "series_sort": "SeriesSort",
+    "title_sort": "TitleSort",
     "count": "Count",
     "writer": "Writer",
     "penciller": "Penciller",
@@ -72,6 +73,7 @@ class ComicInfo:
     genre = ""
     age_rating = ""
     series_sort = ""
+    title_sort = ""
     series_group = ""
     alternate_series = ""
     story_arc = ""

@@ -60,6 +60,7 @@ class LoadedComicInfo(LoadedFileMetadata, LoadedFileCoverData, ILoadedComicInfo)
             "series": self.cinfo_object.series or "",
             "series_sort": self.cinfo_object.series_sort or "",
             "title": self.cinfo_object.title or "",
+            "title_sort": self.cinfo_object.title_sort or "",
             "chapter": self.cinfo_object.number or "",
             "volume": self.cinfo_object.volume or "",
             "publisher": self.cinfo_object.publisher or ""
