@@ -6,8 +6,7 @@ from idlelib.tooltip import Hovertip
 from tkinter import Frame, CENTER, Button, NW
 from tkinter.filedialog import askopenfile
 from tkinter.ttk import Treeview
-
-import numpy as np
+import math
 from PIL import Image, ImageTk
 
 from src.Common import ResourceLoader
@@ -405,7 +404,7 @@ class CoverManager(tkinter.Toplevel):
             selected_photoimage: ImageTk.PhotoImage = frame.loaded_cinfo.get_cover_cache(True)
 
         selected_image = ImageTk.getimage(selected_photoimage)
-        x = np.array(selected_image.histogram())
+        x = selected_image.histogram()
         self.clear_selection()
         # Compare all covers:
         for comicframe in self.scrolled_widget.winfo_children():
@@ -437,7 +436,7 @@ class CoverManager(tkinter.Toplevel):
 
     def _compare_images(self, x, compared_image, comicframe, pos):
         delta = float(self.delta_entry.get())
-        y = np.array(compared_image.histogram())
+        y = compared_image.histogram()
         if self.compare_image(x, y, delta=delta):
             self.select_frame(None, frame=comicframe, pos=pos)
 
@@ -454,7 +453,7 @@ class CoverManager(tkinter.Toplevel):
         """
         actual_error = 0
         if len(x) == len(y):
-            error = np.sqrt(((x - y) ** 2).mean())
+            error = math.sqrt(((x - y) ** 2).mean())
             error = str(error)[:2]
             actual_error = float(100) - float(error)
             logger.debug(f"Match percentage: {actual_error}%")

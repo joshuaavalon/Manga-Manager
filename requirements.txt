@@ -1,11 +1,31 @@
-prompt_toolkit>=3.0.31
-pillow>=9.4.0
-Pillow
-natsort>=8.2.0
-lxml >= 4.9.1
-six >= 1.16.0
-requests >= 2.31.0
-anytree~=2.8.0
-numpy~=1.26.4
-rarfile
-tkinterdnd2
+altgraph==0.17.4
+anytree==2.12.1
+certifi==2025.1.31
+charset-normalizer==3.4.1
+idna==3.10
+impi-rt==2021.14.2
+intel-cmplr-lib-rt==2025.0.5
+intel-cmplr-lib-ur==2025.0.5
+intel-cmplr-lic-rt==2025.0.5
+intel-fortran-rt==2025.0.5
+intel-openmp==2025.0.5
+lxml==5.3.1
+mkl==2025.0.1
+natsort==8.4.0
+packaging==24.2
+pefile==2023.2.7
+pillow==11.1.0
+prompt_toolkit==3.0.50
+pyinstaller==6.12.0
+pyinstaller-hooks-contrib==2025.1
+pywin32-ctypes==0.2.3
+rarfile==4.2
+requests==2.32.3
+setuptools==75.8.2
+six==1.17.0
+tbb==2022.0.0
+tcmlib==1.2.0
+tkinterdnd2==0.4.3
+umf==0.9.1
+urllib3==2.3.0
+wcwidth==0.2.13

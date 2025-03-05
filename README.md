@@ -18,16 +18,16 @@ Has a built-in metadata editor as well as cover and back cover editor.
 
 # Key Features:
 
-* Select multiple files and preview the covers of each file
-* Bulk edit metadata for all files at once
-* Changes are kept in one session, allowing flexible editing
-* Apply all changes (save to file) at once when done editing
-* Edit cover or back cover from the metadata view itself
-* Cover manager for batch editing of covers
-* Online metadata scraping
-* Webp converter
-* Error and warning log within the UI itself
-* Terminal interface (supports ssh)
+- Select multiple files and preview the covers of each file
+- Bulk edit metadata for all files at once
+- Changes are kept in one session, allowing flexible editing
+- Apply all changes (save to file) at once when done editing
+- Edit cover or back cover from the metadata view itself
+- Cover manager for batch editing of covers
+- Online metadata scraping
+- Webp converter
+- Error and warning log within the UI itself
+- Terminal interface (supports ssh)
 
 ### Does it work for comics?
 
@@ -48,7 +48,6 @@ A docker container with a remote desktop is available. It's important to expose 
 
 The stable releases are built from the master branch, while nightly builds are generated from the develop branch.
 
-
 ![Screenshot-1](/project-docs/Screenshot_1.png)
 
 ### Art attribution
@@ -62,9 +61,16 @@ Min required version: Python 3.10.8
 Requirements in requirements.txt
 
 #### Additional for Linux
+
 - tkinter
 - idlelib
 
 ## FAQ
+
 ### No rar tools detected on windows.
+
 Download [unrar](https://www.winrar.es/descargas/unrar), execute it and select a place to decompress the contents. A file `unrar.exe` will be decompressed and you can move so it sits alongside MangaManager.exe file.
+
+```
+pyinstaller MangaManager\main.py --clean -y  --add-data="MangaManager\res:res" --additional-hooks-dir="MangaManager\pyinstaller_hooks"
+```
